@@ -1,0 +1,61 @@
+body {
+	font-family: Comic Sans MS, Verdana, Arial, Helvetica ;
+    margin: 10px;
+    padding: 20px;
+    font-style: italic;
+}
+header{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+}
+h4 {
+    text-decoration: underline;
+}
+footer {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: lightgray;
+}
+.bg-container{
+  width: 100%;
+  height: 1420px;
+  border: 1px solid #000;
+  position: relative;
+}
+.bg-container .content{
+  position: absolute;
+  z-index:999;
+  width: 100%;
+  padding: 30px;
+}
+.bg-container::after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index:99;
+  background-image: url("IMG_20180701_124256.jpg");
+  background-size: cover;
+  opacity: 0.4;
+}

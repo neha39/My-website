@@ -1,0 +1,89 @@
+$color: #fc85af;
+body {
+	font-family: Verdana, Arial, Helvetica ;
+}
+header
+{
+  background-color: $color;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+section {
+  display: -webkit-flex;
+  display: flex;
+  article {
+    -webkit-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+    background-color: #f1f1f1;
+    padding: 40px;
+    z-index: 999;
+    text-align: justify;
+    font-size: 25px;
+    h2{
+      font-size: 30px;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    p{
+      font-size: 20px;
+      text-align: justify;
+    }
+  }
+}
+footer {
+  background-color: $color;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+.blinking{
+	animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: #000;	}
+}
+h2{
+  text-align: center;
+  text-decoration: underline;
+}
+#heading1{
+  text-decoration: underline;
+	text-decoration-style: wavy;
+  text-decoration-color: white;
+}
+.alert {
+  margin: 20px;
+}
+
+%message-shared {
+  border: 3px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.thought1 {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.thought2 {
+  @extend %message-shared;
+  border-color: green;
+}
